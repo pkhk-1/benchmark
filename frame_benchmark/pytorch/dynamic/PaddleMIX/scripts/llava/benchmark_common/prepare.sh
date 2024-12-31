@@ -26,6 +26,8 @@ rm -rf models--openai--clip-vit-large-patch14-336
 wget https://paddlenlp.bj.bcebos.com/models/community/paddlemix/llava_torch/models--openai--clip-vit-large-patch14-336.tar
 tar -xf models--openai--clip-vit-large-patch14-336.tar
 rm -rf models--openai--clip-vit-large-patch14-336.tar
+mkdir openai
+mv models--openai--clip-vit-large-patch14-336  openai/clip-vit-large-patch14-336
 
 export http_proxy=agent.baidu.com:8188
 export https_proxy=agent.baidu.com:8188

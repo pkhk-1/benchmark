@@ -89,7 +89,7 @@ function _train(){
         --version v1 \
         --data_path llava_bench_data/ScienceQA_val_500_torch.json \
         --image_folder ./ \
-        --vision_tower models--openai--clip-vit-large-patch14-336 \
+        --vision_tower openai/clip-vit-large-patch14-336 \
         --mm_projector_type mlp2x_gelu \
         --mm_vision_select_layer -2 \
         --mm_use_im_start_end False \
@@ -126,7 +126,7 @@ function _train(){
         --version v1 \
         --data_path llava_bench_data/ScienceQA_val_500_torch.json \
         --image_folder ./ \
-        --vision_tower models--openai--clip-vit-large-patch14-336 \
+        --vision_tower openai/clip-vit-large-patch14-336 \
         --mm_projector_type mlp2x_gelu \
         --mm_vision_select_layer -2 \
         --mm_use_im_start_end False \
@@ -159,10 +159,10 @@ function _train(){
         train_cmd="llava/train/train_mem.py \
         --deepspeed zero2.json \
         --model_name_or_path ${model_path} \
-        --version v1 \
+        --version plain \
         --data_path llava_bench_data/ScienceQA_val_500_torch.json \
         --image_folder ./ \
-        --vision_tower models--openai--clip-vit-large-patch14-336 \
+        --vision_tower openai/clip-vit-large-patch14-336 \
         --mm_projector_type mlp2x_gelu \
         --tune_mm_mlp_adapter True \
         --mm_vision_select_layer -2 \
